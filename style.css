@@ -1,0 +1,91 @@
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    color: rgb(134, 130, 130);
+    margin-top: -20;
+}
+
+.imagem {
+    text-align: center;
+}
+
+.imagens img {
+    width: 250px;
+    height: auto;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: -5px;
+}
+
+.imagens {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.texto-quadrado {
+    border: 0px solid #fff;
+    padding: 0px;
+    width: auto;
+    max-width: 775px;
+    text-align: center;
+    border-radius: 100px;
+    margin-top: 40px;
+    margin-bottom: 150px;
+    color: #fff;
+}
+
+.texto-quadrado::before,
+.texto-quadrado::after {
+    content: "";
+    display: block;
+    width: 230px;
+    height: 1px;
+    background-color: #986100;
+    margin: -10px auto;
+}
+
+.texto-quadrado hr {
+    border: 0;
+    height: 1px;
+    background-color: #986100;
+    margin: -10px 0;
+}
+
+.conteudo {
+    max-width: 600px;
+    margin: -90px auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.imagem-lateral img {
+    width: auto; /* Define a largura máxima da imagem lateral */
+    max-width: auto; /* Ajusta a largura máxima para igualar ao tamanho das imagens do livro */
+    align-self: flex-start;
+    margin-left: -23px; /* Aproxima a imagem lateral das imagens do livro */
+    margin-top: 16px;
+}
+
+#inferno1:hover {
+    content: url('imagens/tomo_inf_b.gif');
+}
+
+#purgatorio1:hover {
+    content: url('imagens/tomo_pur_b.gif');
+}
+
+#paraiso1:hover {
+    content: url('imagens/tomo_par_b.gif');
+}

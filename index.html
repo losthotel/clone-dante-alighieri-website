@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página da Uva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> <left>
+    <img id="titulo-img" src="imagens/dantetitulo.png" alt="Titulo Imagem" />
+<main>
+        <div class="imagens">
+            <div class="texto-quadrado">
+                <p>Início</p>
+                <hr>
+                <p>Vida de Dante</p>
+                <hr>
+                <p>Poema original (italiano)</p>
+                <hr>
+                <p>Créditos</p>
+            </div>
+            <div class="imagem">
+                <div class="area-texto">
+                    <p></p>
+                </div>
+               <img src="imagens/capaliv.gif" alt="Imagem do Livro">
+                <br><img id="inferno1" src="imagens/tomo_inf.gif" alt="Imagem do Livro" style="margin-top: -8px;">
+               <br><img id="purgatorio1" src="imagens/tomo_pur.gif" alt="Imagem do Livro" style="margin-top: -8px;">
+              <br><img id="paraiso1" src="imagens/tomo_par.gif" alt="Imagem do Livro" style="margin-top: -8px;">
+            </div>
+            <div class="imagem-lateral">
+                <img src="imagens/lateral.gif" alt="Imagem da Lateral">
+            <br>
+        </div></div>
+        <div class="conteudo">
+            <p style="color: #ffffff; text-align: right; font-size: 12px;">
+                Tradução em prosa por Helder da Rocha (© 1999, 2000)
+            </p>
+            <hr style="border: 0; height: 1px; background-color: #986100; margin-top: -10px; margin-bottom: 5px;">
+        </div>
+    </main>
+    <script>
+
+        const imagens = [
+            "imagens/dantetitulo.png",
+            "imagens/dantetitulo2.png",
+        ];
+
+        let contador = parseInt(localStorage.getItem("contadorEntradas")) || 0;
+
+        // Incrementa o contador
+        contador++;
+
+        localStorage.setItem("contadorEntradas", contador);
+
+        const index = Math.floor(contador / 5) % imagens.length;
+
+        document.getElementById("titulo-img").src = imagens[index];
+    </script>
+</body>
+</html>
