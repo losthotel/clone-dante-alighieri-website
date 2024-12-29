@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+    flex-direction: row; /* Organiza o layout em linha (sidebar + conteúdo) */
+}
+
+/* Conteúdo principal do "livro" */
+.main-content {
+    margin: -5px;
+    display: block;
+    background-image: url('imagens/inf_back.jpg'); /* Imagem do fundo do livro */
+    background-repeat: repeat-y;
+    background-size: auto;
+    width: 596px; /* Mesma largura do livro */
+    height: auto; /* Ajustável com o conteúdo */
+    margin-left: 150px;
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Adicionado para controlar o empilhamento */
+}
+
+/* Imagem no topo do conteúdo principal, acima do fundo */
+.top-banner {
+    width: 625px;
+    height: 20px;
+    position: absolute;
+    top: 0; /* Coloca a imagem no topo do conteúdo */
+    left: 0;
+    z-index: 1; /* Garante que fique acima do fundo */
+    
+}
+
+.top-banner img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.sidebar {
+    position: fixed; /* Fixa a sidebar na tela */
+    top: 0; /* Fixa no topo */
+    left: 0; /* Fixa à esquerda */
+    width: 130px;
+    height: 100%; /* Garante que a sidebar ocupe toda a altura da tela */
+    background-color: #4d1e1e;
+    background-image: url('imagens/inf_back_bar.jpg');
+    background-repeat: repeat-y;
+    background-size: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Garante que a sidebar fique acima do conteúdo */
+}
+
+/* Logo, sections e nav em uma linha */
+.sidebar > .logo,
+.sidebar > .sections,
+.sidebar > nav {
+    margin-bottom: 10px;  /* Garantindo um espaço entre os elementos */
+}
+
+/* Logo */
+.logo img {
+    max-width: 100%;
+    margin-bottom: 0;  /* Remover margem extra abaixo da logo */
+}
+
+/* Sections */
+.sections h1,
+.sections h2,
+.sections h3 {
+    color: #fff;
+    font-size: 16px;
+    margin: 5px 0;
+    text-align: center;
+    background-color: #640000;
+    padding: 5px;
+    border: 2px solid #880000;
+    border-radius: 5px;
+}
+
+/* Menu Nav */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ff4400; /* Vermelho vivo */
+    border-color: #a52a2a;
+    background-color: rgb(25%,10%,10%);
+    text-align: center;
+    line-height: 100%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding: 1px;
+    border-style: outset;
+    border-width: 1px;
+    width: 100%;
+    font-family: Tahoma, sans-serif;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(100%,90%,0%);
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: rgb(100%,90%,0%)
+}
+
+.about {
+    color: rgb(60%, 30%, 30%);
+    text-indent: 0px;
+    text-align: center;
+    line-height: 150%;
+    margin: 24px 0px;
+    font-weight: bold;
+    font-size: 12pt;
+    font-family: Garamond, serif;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.about a:link {
+    color: rgb(50%, 25%, 0%);
+}
+
+.conteudolivro {
+    font-size: 14pt;
+    text-align: justify;
+    text-indent: 1cm;
+    margin-top: 7pt;
+    margin-bottom: 7pt;
+    line-height: 50%;
+    font-family: Garamond, serif;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    color: #ff4400;
+}
